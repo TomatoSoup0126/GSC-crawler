@@ -8,7 +8,7 @@ const getImgPath = require('./getImgPath.js')
 
 getImgPath('資料夾名稱', 'GSC商品詳細網址')
   .then(paths => {
-    console.log('完工了')
+    console.log(paths)
   })
 
 

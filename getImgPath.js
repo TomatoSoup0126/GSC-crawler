@@ -35,16 +35,13 @@ async function getImgPath(folderName,productPath) {
       fs.writeFile(`./${folderName}/${index}.jpg`, await imgSource.buffer(), function (err){})
       console.log(`image_${index} download complete`)
       // //上傳到imgur
-      // const localPath = '/Users/jonathantang/Projects/GSC_crawler'
-      // const imgurPath =  (await imgur.uploadFile(`${localPath}/${folderName}/${index}.jpg`)).data.link
-      // imgurPaths.push(imgurPath)
+      const localPath = '/Users/jonathantang/Projects/GSC_crawler'
+      const imgurPath =  (await imgur.uploadFile(`${localPath}/${folderName}/${index}.jpg`)).data.link
+      imgurPaths.push(imgurPath)
      
     }
     await browser.close()
 
-    // fs.unlink(folderName, function () {
-    //   console.log('圖檔已刪除!');
-    // });
 
     return imgurPaths
     
