@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "imgur": "^0.3.1",
     "puppeteer": "^2.0.0"
   }
 }
